@@ -87,7 +87,10 @@ def action(msg):
 
 # 填寫當初設定 Telegram Bot 的 token
 ''' start of you code '''
-telegram_bot = telepot.Bot('6947686178:AAErh2qLTSZ9YtURfwrzTZVGAafRfy3MZQ4')
+
+# the xxxxx part make github give me alert to let me remove the part
+telegram_bot = telepot.Bot('xxxxxx:xxxxxxxx')
+
 ''' end of you code '''
 
 print(telegram_bot.getMe())
