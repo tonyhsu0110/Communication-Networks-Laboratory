@@ -1,0 +1,9 @@
+/var/www/html/
+curl -d "s=1&t=25&h=47" http://192.168.0.18/demo1.php
+curl -d "s=2&t=23&h=52" http://192.168.0.18/demo1.php
+more humi_1.txt
+more temp_1.txt
+more humi_2.txt
+more temp_2.txt
+curl -d "s=1&t=30&h=52&m=11&d=23" http://192.168.0.3/Q2.php
+curl -d "s=4&t=30&h=52&m=11&d=23" http://192.168.0.3/Q2.php

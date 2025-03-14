@@ -1,0 +1,28 @@
+<?php
+        header("Content-Type:text/html; charset=utf-8");
+        $Temp = $_POST[t];
+        $Humi = $_POST[h];
+        $SensorID=$_POST[s];
+
+        $Date = $_POST[d];
+        $Month = $_POST[m];
+
+        echo 'Month: '.$Month."\n";
+        echo 'Date: '.$Date."\n";
+        echo 'Sensor: '.$SensorID."\n";
+        echo 'Temperature: '.$Temp."\n";
+        echo 'Humidity: '.$Humi."\n";
+
+	$fp = fopen('/home/pi/www-data/month_'.$SensorID.'.txt','w');
+        fwrite($fp,$Month);
+        fclose($fp);
+        $fp = fopen('/home/pi/www-data/date_'.$SensorID.'.txt','w');
+        fwrite($fp,$Date);
+        fclose($fp);
+        $fp = fopen('/home/pi/www-data/temp_'.$SensorID.'.txt','w');
+        fwrite($fp,$Temp);
+        fclose($fp);
+        $fp = fopen('/home/pi/www-data/humi_'.$SensorID.'.txt','w');
+        fwrite($fp,$Humi);
+	fclose($fp);
+?>
